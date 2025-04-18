@@ -1,0 +1,19 @@
+{
+  "name": "boilerplate-monorepo-expo",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:my-app": "bun run --filter=my-app dev",
+    "dev:api": "bun run --filter=api dev",
+    "dev": "bun run --filter './apps/*' dev",
+    "build:api": "bun run --filter=api build",
+    "build:my-app": "bun run --filter=my-app build",
+    "build": "bun run build --filter=my-app,api"
+
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
